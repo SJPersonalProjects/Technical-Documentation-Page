@@ -1,14 +1,23 @@
+/* Open Sans font importing. */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
 :root {
     --headings-color: black;
     /* Colors used in navbar list items and other simple texts. */
     --text-color: #4d4e53;
+
+    /* Code block background-color. */
+    --code-background-color: #f7f7f7;
 }
 
 * {
     padding: 0;
     margin: 0;
-    font-family: 'Open Sans', Arial, sans-serif;
     box-sizing: border-box;
+}
+
+body {
+    font-family: Helvetica, Arial, sans-serif;
 }
 
 /* Page layout styling. */
@@ -16,21 +25,30 @@
     display: flex;
 }
 
+#technical_documentation_page>section {
+    flex: 2;
+}
+
+#technical_documentation_page main {
+    flex: 8;
+}
+
 /* Navigation bar styling. */
 #navbar {
     height: 100vh;
-    border-right: 4px solid rgb(150, 150, 150);
+    position: fixed;
+    border-right: 4px solid #969696;
 }
 
 #navbar header {
     font-size: 1.8rem;
     color: var(--headings-color);
-    padding: .8rem 2rem 1rem 2rem;
+    padding: .8rem 2rem 1.2rem 2rem;
 }
 
 #navbar ul li {
     list-style: none;
-    border-top: 1px solid black;
+    border-top: 1px solid #969696;
     font-size: 1rem;
     padding: .8rem 2rem;
 }
@@ -40,9 +58,48 @@
     color: var(--text-color);
 }
 
+/* Main section content styling. */
 
+#main-doc {
+    margin: 0 2rem;
+}
 
+.main-section header {
+    font-size: 1.8rem;
+    margin: 2rem 0 .5rem 0;
+}
 
+.main-section p {
+    margin: 1.5rem 0 1rem 1rem;
+    font-size: .95rem;
+    line-height: 1.5;
+}
+
+.main-section ul {
+    margin-left: 5rem;
+}
+
+.main-section ul li {
+    margin: 1.5rem 0;
+    font-size: .95rem;
+    line-height: 1.5;
+}
+
+.main-section p,
+.main-section ul li {
+    color: var(--text-color);
+}
+
+.main-section div {
+    background-color: var(--code-background-color);
+    padding: 1rem 2rem;
+    margin-left: 2rem;
+    color: var(--text-color);
+}
+
+.main-section div code {
+    line-height: 1.5rem;
+}
 
 @media (prefers-reduced-motion: no-preference) {
     * {
