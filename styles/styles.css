@@ -1,0 +1,51 @@
+:root {
+    --headings-color: black;
+    /* Colors used in navbar list items and other simple texts. */
+    --text-color: #4d4e53;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Open Sans', Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+/* Page layout styling. */
+#technical_documentation_page {
+    display: flex;
+}
+
+/* Navigation bar styling. */
+#navbar {
+    height: 100vh;
+    border-right: 4px solid rgb(150, 150, 150);
+}
+
+#navbar header {
+    font-size: 1.8rem;
+    color: var(--headings-color);
+    padding: .8rem 2rem 1rem 2rem;
+}
+
+#navbar ul li {
+    list-style: none;
+    border-top: 1px solid black;
+    font-size: 1rem;
+    padding: .8rem 2rem;
+}
+
+#navbar ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+
+
+
+
+@media (prefers-reduced-motion: no-preference) {
+    * {
+        scroll-behavior: smooth;
+    }
+}
